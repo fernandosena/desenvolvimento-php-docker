@@ -38,7 +38,9 @@ services:
   #     - .:/var/www
 
   apache:
-    build: ./docker/apache
+    build: 
+      context: ./docker/apache
+      dockerfile: Dockerfile
     restart: unless-stopped
     container_name: docker.apache
     tty: true
